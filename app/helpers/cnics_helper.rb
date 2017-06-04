@@ -1,0 +1,2 @@
+module CnicsHelper
+end

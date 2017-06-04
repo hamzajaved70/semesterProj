@@ -1,0 +1,16 @@
+<div style="padding: 5%;">
+<%if License.exists?(user_id: current_user) %>
+	<h3>Your License already exists</h3>	
+		<br>
+
+	<%= link_to "Go Back", licenses_path %>
+<% else %>
+<%# if current_user.license.present? %>
+<%# end %>
+<h1>New license</h1>
+
+<%= render 'form', license: @license %>
+
+<%= link_to 'Back', licenses_path %>
+<% end %>
+</div>

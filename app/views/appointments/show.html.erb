@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<div style="padding: 5%;">
+<% if can? :manage, Appointment %>
+	<%= link_to 'Add details to this guy', edit_cnic_path(@appointment.cnic) %>
+<% end %>
+
+
+<h3>Your appointment is scheduled at:</h3>
+<%= @appointment.time_slot %>
+
+<br>
+<br>
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>
+</div>

@@ -19,6 +19,24 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'annotate'
+
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+gem 'cancancan', '~> 1.10'
+
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
+gem 'will_paginate', '~> 3.1.5'
+
+gem 'country_select'
+
+gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
+
+gem 'friendly_id', '~> 5.1.0'
+
+gem 'jquery-rails'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -26,7 +44,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem "devise", git: 'https://github.com/plataformatec/devise.git'
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -35,6 +53,10 @@ gem "devise", git: 'https://github.com/plataformatec/devise.git'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

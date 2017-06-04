@@ -1,0 +1,2 @@
+module LappointmentsHelper
+end

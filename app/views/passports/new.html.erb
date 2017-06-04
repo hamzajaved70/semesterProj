@@ -1,0 +1,15 @@
+<div  style="padding: 5%;">
+<%if Passport.exists?(user_id: current_user) %>
+
+	<h3>Your Passport already exists</h3>
+	<br>	
+	<%= link_to "Go Back", passports_path %>
+<% else %>
+
+<h1>New Passport</h1>
+
+<%= render 'form', passport: @passport %>
+
+<%= link_to 'Back', passports_path %>
+<% end %>
+</div>

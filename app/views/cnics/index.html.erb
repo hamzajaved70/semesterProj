@@ -1,0 +1,87 @@
+<p id="notice"><%= notice %></p>
+<div style="padding: 5%;">
+<h1>Cnics</h1>
+
+<div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 style="text-align: center;"><i class="fa fa-fw fa-check"></i> CNIC </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>24/7 Call center also work to facilitate citizen. Citizens will get an Appointment dayte after filling out the form for request.</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if can? :manage, Cnic %>
+    <% @acnics.each do |cnic| %>
+    <tr>
+      <td><%= cnic.full_name  %></td>
+      <td><%= link_to 'Show', cnic %></td>
+      <td>
+        <%if Cnic.exists?(user_id: current_user) %>
+          <% if cnic.expiry %>
+              <%= link_to "Renew Cnic", appointments_path %>
+          <% end %>
+        <% end %>
+
+      </td>
+      <% if can? :manage, Cnic %>
+      <% if cnic.approved? %>
+      <td><%= link_to 'Dispprove', disapprove_cnic_path(cnic), method: :put %></td>
+      <% else %>
+      <td><%= link_to 'Approve', approve_cnic_path(cnic), method: :put %></td>
+      <% end %>
+      <td><%= link_to 'Edit', edit_cnic_path(cnic) %></td>
+      <td><%= link_to 'Destroy', cnic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tr>
+    <% end %>
+    <% else %>
+      <% @cnics.each do |cnic| %>
+    <tr>
+      <td><%= cnic.full_name  %></td>
+      <td><%= link_to 'Show', cnic %></td>
+      <td>
+        <%if Cnic.exists?(user_id: current_user) %>
+          <% if cnic.expiry %>
+              <%= link_to "Renew Cnic", appointments_path %>
+          <% end %>
+        <% end %>
+
+      </td>
+      <% if can? :manage, Cnic %>
+      <% if cnic.approved? %>
+      <td><%= link_to 'Dispprove', disapprove_cnic_path(cnic), method: :put %></td>
+      <% else %>
+      <td><%= link_to 'Approve', approve_cnic_path(cnic), method: :put %></td>
+      <% end %>
+      <td><%= link_to 'Edit', edit_cnic_path(cnic) %></td>
+      <td><%= link_to 'Destroy', cnic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%if Cnic.exists?(user_id: current_user) %>
+<% else %>
+  <%= link_to 'New Cnic', new_cnic_path, :class => "btn btn-warning" %>
+<% end %>
+
+<br>
+<%# if can? :manage, Cnic %>
+<%#= link_to 'New Cnic', new_cnic_path %>
+<%# end %>
+</div>

@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<% if can? :manage, Passport %>
+<p>Image: <%= image_tag @passport.image.url(:medium) %></p>
+
+<p>Sign: <%= image_tag @passport.sign.url(:medium) %></p>
+<% end %>
+
+
+<p>Full Name: <%= @passport.full_name %></p>
+<p>Father's Name: <%= @passport.father_name %></p>
+<p>CNIC No. :<%= @passport.cnic %></p>
+<p>Date of Birth: <%= @passport.dob %></p>
+<p>Gender: <%= @passport.gender %></p>
+<p>Permanent Address: <%= @passport.permanent_address %></p>
+<p>Expiry Date: <%= @passport.date_of_expiry %></p>
+
+<%#= @passport.pappointment.time_slot %>
+
+<%= link_to 'Edit', edit_passport_path(@passport) %> |
+<%= link_to 'Back', passports_path %>

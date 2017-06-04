@@ -1,0 +1,16 @@
+<div style="padding: 5%;">
+<%if Cnic.exists?(user_id: current_user) %>
+	<h3>Your License already exists</h3>	
+	<br>
+	
+	<%= link_to "Go Back", cnics_path %>
+<% else %>
+<%# if current_user.cnic.present? %>
+<%# end %>
+<h1>New Cnic</h1>
+
+<%= render 'form', cnic: @cnic %>
+
+<%= link_to 'Back', cnics_path %>
+<% end %>
+</div>

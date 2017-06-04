@@ -1,0 +1,24 @@
+<div style="padding: 5%;">
+<p id="notice"><%= notice %></p>
+
+<% if can? :manage, License %>
+<p>Image: <%= image_tag @license.image.url(:medium) %></p>
+
+<p>Sign: <%= image_tag @license.sign.url(:medium) %></p>
+<% end %>
+
+
+<p>Full Name: <%= @license.full_name %></p>
+<p>Father's Name: <%= @license.father_name %></p>
+<p>CNIC No. :<%= @license.cnic %></p>
+<p>Date of Birth: <%= @license.dob %></p>
+<p>Gender: <%= @license.gender %></p>
+<p>Permanent Address: <%= @license.permanent_address %></p>
+<p>Expiry Date: <%= @license.expiry_date %></p>
+<p>Issue Date: <%= @license.issue_date %><</p>
+
+<%# @license.appointment.time_slot %>
+
+<%= link_to 'Edit', edit_license_path(@license) %> |
+<%= link_to 'Back', licenses_path %>
+</div>

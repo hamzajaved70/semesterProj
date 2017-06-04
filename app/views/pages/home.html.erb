@@ -1,2 +1,169 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('/assets/SC.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Pakistan Supreme Court</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('/assets/monument.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Monument</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('/assets/mosque.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Faisal Mosque</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+    <!-- Page Content -->
+
+    
+   
+
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    <b>PAKISTAN ADMINISTRATIVE SERVICE ASSOCIATION</b>
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i> CNIC </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>24/7 Call center also work to facilitate citizen. Citizens will get an Appointment dayte after filling out the form for request.</p>
+                        <%= link_to "Learn More",pages_services_path, :class => "btn btn-default" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-gift"></i> License </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>24/7 Call center also work to facilitate citizen. Citizens will get an Appointment dayte after filling out the form for request.</p>
+                        <%= link_to "Learn More",pages_services_path, :class => "btn btn-default" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-compass"></i> Passport</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>24/7 Call center also work to facilitate citizen. Citizens will get an Appointment dayte after filling out the form for request.</p>
+                        <%= link_to "Learn More",pages_services_path, :class => "btn btn-default" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Govt. of Pakistan</h2>
+            </div>
+            <div class="col-md-4 col-sm-6 govt">
+                <a href="">
+                    <img class="img-responsive img-portfolio img-hover" src="/assets/minar.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 govt">
+                <a href="">
+                    <img class="img-responsive img-portfolio img-hover" src="/assets/lahore5.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 govt">
+                <a href="">
+                    <img class="img-responsive img-portfolio img-hover" src="/assets/mosque_faisal.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 govt">
+                <a href="">
+                    <img class="img-responsive img-portfolio img-hover" src="/assets/wazir.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 govt">
+                <a href="">
+                    <img class="img-responsive img-portfolio img-hover" src="/assets/amjad.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 govt">
+                <a href="">
+                    <img class="img-responsive img-portfolio img-hover" src="/assets/sohail.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Business Features</h2>
+            </div>
+            <div class="col-md-6">
+                <p>The Business feature includes: </p>
+                <ul>
+                    <li><strong>Civil Services</strong>
+                    </li>
+                    <li>Customer Query</li>
+                    <li>Citizen Issues</li>
+                    <li>FAQ's</li>
+                    <li>Current Affairs</li>
+                </ul>
+                <p>Civil Service of Pakistan (CSP), is the general administrative cadre of the Government of Pakistan. It is the most prestigious Service within Pakistan’s Govt. and of the nearly three million public servants on the roll of the Government. There are available facilitis for citizens where they can manage issues at a single place.</p>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="/assets/banner.jpg" alt="">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Call to Action Section -->
+        <div class="well">
+            <div class="row">
+                <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                    </div>
+                <div class="col-md-4">
+                    <a class="btn btn-lg btn-default btn-block" href="#">Subscribe to Updates</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<div style="padding: 5%;">
+<h1>Appointments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if can? :manage, Appointment %>
+        <% @aappointments.each do |appointment| %>
+          <tr>
+            <td><%= appointment.user_id %></td>
+            <td><%= appointment.time_slot %></td>
+            <td><%= appointment.cnic %></td>
+            
+            <td><%= link_to 'Show', appointment %></td>
+            <% if can? :manage, Appointment %>
+            <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+            <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          </tr>
+        <% end %>
+    <% else %>
+        <% @appointments.each do |appointment| %>
+          <tr>
+            <td><%= appointment.user_id %></td>
+            <td><%= appointment.time_slot %></td>
+            <td><%= link_to 'Show', appointment %></td>
+            <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+            <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appointment', new_appointment_path %>
+</div>

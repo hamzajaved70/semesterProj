@@ -1,0 +1,188 @@
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Services
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Services</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Image Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="/assets/serv.jpg" alt="">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Service Panels -->
+        <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Services Panels</h2>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>CNIC Services</h4>
+                        <p>Here you can request and renew your CNIC. </p>
+                        <%= link_to "CNIC", cnics_path, :class => "btn btn-primary" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>License Services</h4>
+                        <p>Here you can get and apply for your Driving license.</p>
+                        <%= link_to "LICENSE", licenses_path, :class => "btn btn-primary" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Passport Services</h4>
+                        <p>Hereyou can apply for Passport and their related stuff.</p>
+                        <%= link_to "PASSPORT", passports_path, :class => "btn btn-primary" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>FAQ's</h4>
+                        <p>Here you can ask your queries and questions.</p>
+                        <%= link_to "Help", pages_help_path, :class => "btn btn-primary" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Tabs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Service Tabs</h2>
+            </div>
+            <div class="col-lg-12">
+
+                <ul id="myTab" class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#service-one" data-toggle="tab"><i class="fa fa-tree"></i> CNIC Services</a>
+                    </li>
+                    <li class=""><a href="#service-two" data-toggle="tab"><i class="fa fa-car"></i> License Services</a>
+                    </li>
+                    <li class=""><a href="#service-three" data-toggle="tab"><i class="fa fa-support"></i> Visa 
+                    Services</a>
+                    </li>
+                    <li class=""><a href="#service-four" data-toggle="tab"><i class="fa fa-database"></i> Frequently asked Questions</a>
+                    </li>
+                </ul>
+
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="service-one">
+                        <h4>CNIC Services</h4>
+                        <p>CNIC services allow you to request a new CNIC or renew your existing CNIC. For this purposeyou need to fill a form with required credentials. Once the formis submitted you'll have your appointment date set. </p>
+                        <p>You can go to the office to collect your id card on the allocated date.</p>
+                    </div>
+                    <div class="tab-pane fade" id="service-two">
+                        <h4>License Services</h4>
+                       <p>License services allow you to request a new CNIC or renew your existing CNIC. For this purposeyou need to fill a form with required credentials. Once the formis submitted you'll have your appointment date set. </p>
+                        <p>You can go to the office to collect your License on the allocated date.</p>
+                    </div>
+                    <div class="tab-pane fade" id="service-three">
+                        <h4>Visa Services</h4>
+                        <p>Visa services allow you to request a new CNIC or renew your existing CNIC. For this purposeyou need to fill a form with required credentials. Once the formis submitted you'll have your appointment date set. </p>
+                        <p>You can go to the office to collect your passport on the allocated date.</p>
+                    </div>
+                    <div class="tab-pane fade" id="service-four">
+                        <h4>FAQ's</h4>
+                        <p>Here you can ask any question and if you have queries regarding any service which we are providing, you can visit this section to complete insight guide. </p>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Service List -->
+        <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Service List</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">CNIC Services</h4>
+                        
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">License Services</h4>
+                        
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Visa Services</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>

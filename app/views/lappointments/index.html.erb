@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<div style="padding: 5%;">
+<h1>Lappointments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if can? :manage, Lappointment %>
+        <% @alappointments.each do |lappointment| %>
+          <tr>
+            <td><%= lappointment.user_id %></td>
+            <td><%= lappointment.time_slot %></td>
+            <td><%= lappointment.cnic %></td>
+            <td><%= link_to 'Show', lappointment %></td>
+            <% if can? :manage, Lappointment %>
+            <td><%= link_to 'Edit', edit_lappointment_path(lappointment) %></td>
+            <td><%= link_to 'Destroy', lappointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          </tr>
+        <% end %>
+    <% else %>
+        <% @lappointments.each do |lappointment| %>
+          <tr>
+            <td><%= lappointment.user_id %></td>
+            <td><%= lappointment.time_slot %></td>
+            <td><%= lappointment.cnic %></td>
+            <td><%= link_to 'Show', lappointment %></td>
+            <td><%= link_to 'Edit', edit_lappointment_path(lappointment) %></td>
+            <td><%= link_to 'Destroy', lappointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New License Appointment', new_lappointment_path %>
+</div>

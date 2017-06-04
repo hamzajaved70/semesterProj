@@ -1,0 +1,24 @@
+<div style="padding: 5%;">
+<p id="notice"><%= notice %></p>
+
+<% if can? :manage, Cnic %>
+<p>Image: <%= image_tag @cnic.image.url(:medium) %></p>
+
+<p>Sign: <%= image_tag @cnic.sign.url(:medium) %></p>
+<% end %>
+
+
+<p>Full Name: <%= @cnic.full_name %></p>
+<p>Father's Name: <%= @cnic.father_name %></p>
+<p>CNIC No. :<%= @cnic.b_form %></p>
+<p>Date of Birth: <%= @cnic.dob %></p>
+<p>Gender: <%= @cnic.gender %></p>
+<p>Current Address: <%= @cnic.current_address %></p>
+<p>Permanent Address: <%= @cnic.permanent_address %></p>
+<p>Expiry Date: <%= @cnic.expiry_date %></p>
+
+<%#@cnic.appointment.time_slot %>
+
+<%= link_to 'Edit', edit_cnic_path(@cnic) %> |
+<%= link_to 'Back', cnics_path %>
+</div>
